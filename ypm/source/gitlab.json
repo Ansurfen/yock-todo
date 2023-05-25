@@ -1,0 +1,8 @@
+{
+    "docker": "https://gitlab.com//Ansurfen/yock-todo/blob/main/ypm/modules/docker/boot.lua",
+    "gradle": "https://gitlab.com//Ansurfen/yock-todo/blob/main/ypm/modules/gradle/boot.lua",
+    "groovy": "https://gitlab.com//Ansurfen/yock-todo/blob/main/ypm/modules/groovy/boot.lua",
+    "java": "https://gitlab.com//Ansurfen/yock-todo/blob/main/ypm/modules/java/boot.lua",
+    "jpm": "https://gitlab.com//Ansurfen/yock-todo/blob/main/ypm/modules/jpm/boot.lua",
+    "maven": "https://gitlab.com//Ansurfen/yock-todo/blob/main/ypm/modules/maven/boot.lua"
+}

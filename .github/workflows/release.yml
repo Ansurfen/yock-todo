@@ -1,0 +1,27 @@
+name: fast publish release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+      - name: set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - name: install dependencies
+        run: pip install -r ./release/requirements.txt
+      - name: publish release
+        env:
+          GH_TOKEN: ${{ secrets.token }}
+          GH_EMAIL: ${{ secrets.email }}
+          GH_SHA: ${{ github.sha }}
+        run: |
+          cd ./release
+          python main.py

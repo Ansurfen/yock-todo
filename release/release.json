@@ -1,0 +1,11 @@
+{
+    "ypm": {
+        "sha256": "",
+        "tag": "",
+        "dir": "../ypm/modules"
+    },
+    "_meta": {
+        "version": 1,
+        "timestamp": 0
+    }
+}
