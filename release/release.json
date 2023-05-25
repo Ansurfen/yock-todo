@@ -1,11 +1,11 @@
 {
     "ypm": {
-        "sha256": "",
-        "tag": "",
+        "sha256": "48a68256c206ca81cbd08ef7973e5b8cad7b2db34e8e4f0f4387cb9473ad9d16",
+        "tag": "2023-05-25-v1",
         "dir": "../ypm/modules"
     },
     "_meta": {
-        "version": 1,
-        "timestamp": 0
+        "version": 2,
+        "timestamp": 1684996762.694762
     }
 }
