@@ -84,8 +84,44 @@ function maven.pom:dep_cvt(fn)
     self.cvt = fn
 end
 
+function maven.pom:open()
+
+end
+
 function maven.pom:dep_parse(fn)
     self.parse = fn
+end
+
+function maven.pom:get_props()
+
+end
+
+function maven.pom:add_props()
+
+end
+
+function maven.pom:rm_props()
+
+end
+
+function maven.pom:get_deps()
+    if self.file == nil then
+        yassert("no binding pom.xml")
+    end
+    local text, err = read_file(self.file)
+    yassert(err)
+    local xmlDoc = xml()
+    xmlDoc:ReadFromBytes(text)
+    local deps_doc = xmlDoc:SelectElement("project"):SelectElement("dependencies"):FindElements("dependency")
+    local deps = {}
+    for i = 1, #deps_doc, 1 do
+        table.insert(deps, {
+            groupId = deps_doc[i]:SelectElement("groupId"):Text(),
+            artifactId = deps_doc[i]:SelectElement("artifactId"):Text(),
+            version = deps_doc[i]:SelectElement("version"):Text(),
+        })
+    end
+    return deps
 end
 
 ---@vararg string
@@ -162,4 +198,23 @@ function maven.pom:dump()
     end
 end
 
-return maven
+function maven:archetype(opt)
+    local archetype = argBuilder:new():add("mvn archetype:generate")
+    for key, value in pairs(opt) do
+        local v = value
+        if type(value) == "boolean" then
+            if value then
+                v = "true"
+            else
+                v = "false"
+            end
+            archetype:add(string.format("-D%s=%s", key, v))
+        else
+            archetype:add(string.format("-D%s=\"%s\"", key, v))
+        end
+    end
+    print(archetype:build())
+    sh(archetype:build())
+end
+
+return { maven = maven, pom = import("./pom") }

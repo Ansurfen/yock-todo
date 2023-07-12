@@ -1,0 +1,18 @@
+{
+    "3.19.5": [
+        {
+            "check": {
+                "os": "windows",
+                "arch": "amd64"
+            },
+            "url": "https://github.com/protocolbuffers/protobuf/releases/download/v3.19.5/protoc-3.19.5-win64.zip"
+        },
+        {
+            "check": {
+                "os": "windows",
+                "arch": "386"
+            },
+            "url": "https://github.com/protocolbuffers/protobuf/releases/download/v3.19.5/protoc-3.19.5-win32.zip"
+        }
+    ]
+}

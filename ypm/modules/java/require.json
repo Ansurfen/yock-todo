@@ -1,0 +1,41 @@
+{
+    "20": [
+        {
+            "check": {
+                "os": "windows",
+                "arch": "amd64"
+            },
+            "url": "https://download.oracle.com/java/20/latest/jdk-20_windows-x64_bin.zip"
+        },
+        {
+            "check": {
+                "os": "darwin",
+                "arch": "arm64"
+            },
+            "url": "https://download.oracle.com/java/20/latest/jdk-20_macos-aarch64_bin.tar.gz"
+        },
+        {
+            "check": {
+                "os": "linux",
+                "arch": "amd64"
+            },
+            "url": "https://download.oracle.com/java/20/latest/jdk-20_linux-aarch64_bin.tar.gz"
+        },
+        {
+            "check": {
+                "os": "linux",
+                "pkg": "debian"
+            },
+            "url": "https://download.oracle.com/java/20/latest/jdk-20_linux-aarch64_bin.rpm"
+        }
+    ],
+    "17": [
+        {
+            "check": {
+                "os": "windows",
+                "arch": "amd64"
+            },
+            "url": "https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.zip"
+        }
+    ]
+}

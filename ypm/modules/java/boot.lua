@@ -1,6 +1,11 @@
 ---@diagnostic disable: undefined-global
-return ymodule({
+return {
     version = "1.0",
     name = "java",
-    tag = ""
-})
+    load = yock_todo_loader,
+    ark = {
+        pull = import("./ark/pull"),
+        load = import("./ark/load"),
+        sail = import("./ark/sail")
+    }
+}

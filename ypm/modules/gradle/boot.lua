@@ -1,6 +1,7 @@
 ---@diagnostic disable: undefined-global
-return ymodule({
+return {
     version = "1.0",
     name = "gradle",
-    tag = ""
-})
+    tag = "",
+    load = yock_todo_loader,
+}

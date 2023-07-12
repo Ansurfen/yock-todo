@@ -25,5 +25,10 @@ local dep_adapter = function(parser)
 end
 
 return {
-    dep_adapter = dep_adapter
+    dep_adapter = dep_adapter,
+    install = import("./ark"),
+    java = import("./java"),
+    javac = import("./javac"),
+    jar = import("./jar"),
+    manifest = import("./manifest")
 }

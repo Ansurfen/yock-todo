@@ -1,0 +1,7 @@
+local manifest = import("./manifest")
+local m = manifest:new()
+m:setMainClass("com.ansurfen.App")
+m:setVersion("1.0")
+m:addClassPath("./")
+print(m:toString())
+m:write()
